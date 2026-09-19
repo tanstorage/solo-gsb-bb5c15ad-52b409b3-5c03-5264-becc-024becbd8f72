@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # Host/port the in-container uvicorn binds to.
+      - PORT=8000
+      - HOST=0.0.0.0
+    restart: unless-stopped
